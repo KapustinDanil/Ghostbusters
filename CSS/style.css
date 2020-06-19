@@ -237,9 +237,17 @@ color: #363636;
     font-weight: 900;
 }
 .tabs-content{
-    display: flex;
+    display: none;
     align-items: center;
     flex-wrap: wrap;
+    visibility: hidden;
+}
+.tab{
+    cursor: pointer;
+}
+.tabs-content.visible{
+    display: flex;
+    visibility: visible;
 }
 .card{
 display: flex;
@@ -299,7 +307,18 @@ color: #5671F6;
     color: #000000;
     margin-top: 14px;
 }
+.button-next{
+    display: none;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 99;
+    cursor: pointer;
 
+}
 @media(max-width:1200px){
     .container{
         min-width: 960px;
@@ -373,6 +392,9 @@ color: #5671F6;
     .header{
         height: 80px;
     }
+    .button-next{
+        display: block;
+    }
     .film{
         padding-top: 50px;
         padding-bottom: 60px;
@@ -392,6 +414,9 @@ color: #5671F6;
     .news{
         padding-top: 50px;
         padding-bottom: 70px;
+    }
+    .news-card{
+        max-width: 90%;
     }
     .mobail-buttons{
         display: block;
